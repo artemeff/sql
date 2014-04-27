@@ -11,7 +11,7 @@ end
 
 group :development, :test do
   gem 'devtools', git: 'https://github.com/rom-rb/devtools.git'
-  gem 'racc',     '= 1.4.9'
+  gem 'racc',     '~> 1.4.11'
 end
 
 eval_gemfile 'Gemfile.devtools'
