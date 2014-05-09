@@ -58,6 +58,7 @@ require 'sql/generator/emitter/unary_function_operation'
 require 'sql/generator/emitter/unary_prefix_operation'
 
 require 'sql/generator/emitter/identifier'
+require 'sql/generator/emitter/prefix'
 require 'sql/generator/emitter/delimited'
 require 'sql/generator/emitter/fields'
 require 'sql/generator/emitter/predicate'

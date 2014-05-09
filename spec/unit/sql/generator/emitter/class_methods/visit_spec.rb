@@ -392,6 +392,13 @@ describe SQL::Generator::Emitter, '.visit' do
     end
   end
 
+  context 'prefixed identifiers' do
+    node = s(:prefix, s(:id, 't1'), s(:id, 'name'))
+    sql = %Q["t1"."name"]
+
+    assert_generates(node, sql)
+  end
+
   context 'when emitter is missing' do
     it 'raises argument error' do
       expect { described_class.visit(s(:not_supported, []), stream) }
