@@ -48,6 +48,8 @@ module SQL
         end
 
         def parenthesize?
+          return false unless TYPES.key?(parent.node_type)
+
           # TODO: when a node has lower precedence than it's parent it
           # should be parenthesized.
 

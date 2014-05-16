@@ -6,6 +6,7 @@ module SQL
 
       # Emitter class for unary operations using functional notation
       class UnaryFunctionOperation < self
+        include ConditionalParenthesis
 
         TYPES = IceNine.deep_freeze(
           count:  O_COUNT,
@@ -34,6 +35,10 @@ module SQL
         def dispatch
           write(TYPES.fetch(node_type), WS)
           parenthesis { visit(operand) }
+        end
+
+        def parenthesize?
+          return false unless TYPES.key?(parent.node_type)
         end
 
       end # UnaryFunctionOperation
