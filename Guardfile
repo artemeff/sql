@@ -6,7 +6,7 @@ guard :bundler do
   watch(%w{.+.gemspec\z})
 end
 
-guard :rspec, cli: File.read('.rspec').split.push('--fail-fast').join(' '), keep_failed: false do
+guard :rspec, failed_mode: :keep do
   # Run all specs if configuration is modified
   watch('.rspec')              { 'spec' }
   watch('Guardfile')           { 'spec' }
@@ -23,10 +23,6 @@ guard :rspec, cli: File.read('.rspec').split.push('--fail-fast').join(' '), keep
 
   # Run a spec if it is modified
   watch(%r{\Aspec/(?:unit|integration)/.+_spec\.rb\z})
-end
 
-# guard :rubocop, cli: %w[--config config/rubocop.yml] do
-#   watch(%r{.+\.(?:rb|rake)\z})
-#   watch(%r{\Aconfig/rubocop\.yml\z})  { |m| File.dirname(m[0]) }
-#   watch(%r{(?:.+/)?\.rubocop\.yml\z}) { |m| File.dirname(m[0]) }
-# end
+  notification :tmux, :display_message => true
+end
