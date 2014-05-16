@@ -19,9 +19,8 @@ matrix:
     - rvm: jruby-head
       env: JRUBY_OPTS="$JRUBY_OPTS --debug"  # for simplecov
   fast_finish: true
-  matrix:
-    allow_failures:
-      - rvm: ruby-head
+  allow_failures:
+    - rvm: ruby-head
 notifications:
   irc:
     channels:
