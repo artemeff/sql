@@ -33,7 +33,7 @@ module SQL
         #
         # @api private
         def parenthesize?
-          !parent.equal?(Root.instance)
+          !parent.equal?(Root.instance) && !parent.kind_of?(Join)
         end
 
       end # Select
