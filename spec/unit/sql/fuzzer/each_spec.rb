@@ -7,7 +7,7 @@ describe SQL::Fuzzer, '#each' do
   let(:ast)    { double('ast').as_null_object }
 
   before do
-    ast.should_receive(:to_ast)
+    expect(ast).to receive(:to_ast)
   end
 
   context 'with a block' do
