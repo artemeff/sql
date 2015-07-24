@@ -10,7 +10,7 @@ platform :rbx do
 end
 
 group :development, :test do
-  gem 'devtools', git: 'https://github.com/rom-rb/devtools.git'
+  gem 'devtools', git: 'https://github.com/mbj/devtools.git'
   gem 'racc',     '~> 1.4.11'
 end
 
