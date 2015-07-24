@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.version     = SQL::VERSION.dup
   gem.authors     = ['Dan Kubb']
   gem.email       = 'dan.kubb@gmail.com'
-  gem.description = 'SQL Parser and Generator'
+  gem.description = 'SQL Generator'
   gem.summary     = gem.description
   gem.homepage    = 'https://github.com/dkubb/sql'
   gem.licenses    = %w[MIT]

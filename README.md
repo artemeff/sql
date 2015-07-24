@@ -1,6 +1,6 @@
 # sql.rb
 
-SQL Parser and Generator for Ruby
+SQL Generator for Ruby
 
 [![Gem Version](https://badge.fury.io/rb/sql.png)][gem]
 [![Build Status](https://secure.travis-ci.org/dkubb/sql.png?branch=master)][travis]

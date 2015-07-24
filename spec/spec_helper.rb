@@ -13,8 +13,6 @@ if ENV['COVERAGE'] == 'true'
     command_name 'spec:unit'
 
     add_filter 'config'
-    add_filter 'lib/sql/parser.rb'
-    add_filter 'lib/sql/scanner.rb'
     add_filter 'spec'
     add_filter 'vendor'
 

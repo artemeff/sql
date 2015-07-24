@@ -53,7 +53,6 @@ group :metrics do
 
   platform :rbx do
     gem 'json',               '~> 1.8.1'
-    gem 'racc',               '~> 1.4.11'
     gem 'rubysl-logger',      '~> 2.0.0'
     gem 'rubysl-open-uri',    '~> 2.0.0'
     gem 'rubysl-prettyprint', '~> 2.0.3'

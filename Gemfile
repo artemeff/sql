@@ -11,7 +11,6 @@ end
 
 group :development, :test do
   gem 'devtools', git: 'https://github.com/mbj/devtools.git'
-  gem 'racc',     '~> 1.4.11'
 end
 
 eval_gemfile 'Gemfile.devtools'

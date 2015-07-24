@@ -33,7 +33,3 @@ measurements
 ## BUNDLER
 .bundle
 Gemfile.lock
-
-## PROJECT::SPECIFIC
-lib/sql/scanner.rb
-lib/sql/parser.rb
